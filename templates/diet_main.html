@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Diety</title>
+	<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/diet_style.css')}}">
+</head>
+<body>
+	<div id = "main">
+	<center>Diet plans</center>
+	<form method="POST" action="#">
+	<div id = "selection">
+
+			<div id = "height_measurment">
+				<input type="text" name="height" placeholder = "Height in cm">
+			</div>
+			<select id = "my_option">
+				<option id ="cm" value ="cm" selected>cm</option>
+				<option id ="feet" value="feet">feet-inch</option>
+			</select>
+
+	</div>
+		<input type="text" name="weight" placeholder="Kg">
+		<button name ="submit" value="Submit">Submit</button>
+	</form>
+	<div id = "display"></div>
+
+	<div id = "calories_check">
+		<input type="text" id="calories" placeholder="check nutrients">
+		<button id = "check">check</button>
+		<div id="display_nutrients"></div>
+	</div>
+	</div>
+</body>
+<script>
+	var infos = {{data|tojson}}
+
+</script>
+<script type="text/javascript" src = "{{ url_for('static',filename='scripts/home_main.js')}}"></script>
+</html>
