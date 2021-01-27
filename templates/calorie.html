@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Workout</title>
+<!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/post.css') }}" /> -->
+{% endblock %}
+
+{% block body %}
+<p>Calorie Intake Needed for :</p>
+<p>Maintaining Weight : {{calories[0]}}.</p>
+<p>Mild Weight Loss ( 0.25 kg/week ) : {{calories[1]}}.</p>
+<p>Weight Loss ( 0.5 kg/week ) : {{calories[2]}}.</p>
+<p>Extreme Weight Loss ( 1 kg/week ) : {{calories[3]}}.</p>
+{% endblock %}
